@@ -17,54 +17,39 @@ import { Poppins } from "next/font/google"
 
 export const metadata = {
   metadataBase: new URL("https://oneclickfibra.com.br"),
-
-  title:
-    "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
-
+  title: "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
   description:
     "Internet fibra óptica com ultra velocidade, estabilidade e suporte de qualidade para sua casa ou empresa.",
 
-  alternates: {
-    canonical: "/",
+  icons: {
+    icon: "/img/favicon.png",
   },
 
   openGraph: {
-    title:
-      "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
-
+    title: "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
     description:
-      "Internet fibra óptica em Mata roma-MA, com ultra velocidade, estabilidade e suporte de qualidade para sua casa ou empresa.",
-
+      "Internet fibra óptica em Mata Roma-MA com alta performance e estabilidade.",
     url: "https://oneclickfibra.com.br",
-
     siteName: "OneClick Fibra",
-
-    type: "website",
-
-    locale: "pt_BR",
-
     images: [
       {
         url: "https://oneclickfibra.com.br/img/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "OneClick Fibra",
       },
     ],
+    locale: "pt_BR",
+    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-
-    title:
-      "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
-
+    title: "OneClick Fibra",
     description:
-      "Internet fibra óptica com ultra velocidade e estabilidade.",
-
+      "Internet fibra óptica com alta velocidade e estabilidade.",
     images: ["https://oneclickfibra.com.br/img/og-image.jpg"],
-  }
-}
+  },
+};
 
 const schema = {
   "@context": "https://schema.org",
@@ -105,7 +90,6 @@ const poppins = Poppins({
 export default function RootLayout({ children }: any) {
   return (
     <html lang="pt-br">
-      <InitAOS />
       <head>
 
         {/* Favicons */}
@@ -122,6 +106,7 @@ export default function RootLayout({ children }: any) {
       <body className={poppins.className}>
 
         {/* Header */}
+        <InitAOS />
         <Header />
         <SectionHero />
 
@@ -139,40 +124,6 @@ export default function RootLayout({ children }: any) {
         <Script src="/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/vendor/swiper/swiper-bundle.min.js" strategy="afterInteractive" />
         <Script src="/js/main.js" strategy="afterInteractive" />
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'InternetServiceProvider',
-
-              name: 'OneClick Fibra',
-
-              url: 'https://oneclickfibra.com.br',
-
-
-              logo: 'https://oneclickfibra.com.br/img/logo.png',
-
-              image: 'https://oneclickfibra.com.br/img/og-image.jpg',
-
-              telephone: '+5598992489457',
-
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Mata Roma',
-                addressRegion: 'MA',
-                addressCountry: 'BR',
-              },
-
-              areaServed: 'Mata roma',
-
-              sameAs: [
-                'https://instagram.com/oneclickfibra',
-              ],
-            }),
-          }}
-        />
-
       </body>
     </html>
   )
