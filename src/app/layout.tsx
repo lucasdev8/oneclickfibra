@@ -45,7 +45,7 @@ export const metadata = {
 
     images: [
       {
-        url: "https://oneclickfibra.com.br/img/logo-cor.png",
+        url: "https://oneclickfibra.com.br/img/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "OneClick Fibra",
