@@ -16,20 +16,54 @@ import SectionTec from "./components/SectionTec"
 import { Poppins } from "next/font/google"
 
 export const metadata = {
-  title: "OneClick Fibra | internet de verdade!",
-  description: "Vem pra para a melhor!",
   metadataBase: new URL("https://oneclickfibra.com.br"),
+
+  title:
+    "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
+
+  description:
+    "Internet fibra óptica com ultra velocidade, estabilidade e suporte de qualidade para sua casa ou empresa.",
+
   alternates: {
-    canonical: "/"
+    canonical: "/",
   },
+
   openGraph: {
-    title: 'OneClick Fibra',
-    description: 'Internet fibra óptica',
-    url: 'https://oneclickfibra.com.br',
-    siteName: 'OneClick Fibra',
-    locale: 'pt_BR',
-    type: 'website'
-  }
+    title:
+      "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
+
+    description:
+      "Internet fibra óptica em Mata roma-MA, com ultra velocidade, estabilidade e suporte de qualidade para sua casa ou empresa.",
+
+    url: "https://oneclickfibra.com.br",
+
+    siteName: "OneClick Fibra",
+
+    type: "website",
+
+    locale: "pt_BR",
+
+    images: [
+      {
+        url: "https://oneclickfibra.com.br/img/logo-cor.png",
+        width: 1200,
+        height: 630,
+        alt: "OneClick Fibra",
+      },
+    ],
+  },
+
+  instagram: {
+    card: "summary_large_image",
+
+    title:
+      "OneClick Fibra | Internet Fibra Óptica de Alta Velocidade",
+
+    description:
+      "Internet fibra óptica com ultra velocidade e estabilidade.",
+
+    images: ["https://oneclickfibra.com.br/img/logo-cor.png"],
+  },
 }
 
 const poppins = Poppins({
@@ -42,12 +76,6 @@ export default function RootLayout({ children }: any) {
     <html lang="pt-br">
       <InitAOS />
       <head>
-
-        {/* Google Fonts
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Montserrat:300,400,600,700|Poppins:300,400,600,700"
-          rel="stylesheet"
-        /> */}
 
         {/* Favicons */}
         <link rel="icon" href="/img/favicon.png" />
