@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react"
 import { Stack } from "@mui/material"
+import Image from "next/image"
 
 function SectionHero() {
 
@@ -29,7 +30,7 @@ function SectionHero() {
                         </div>
                     </div>
                     <div className="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                        <img src="img/astronauta.png" className="img-fluid animated" alt="" />
+                        <Image width={400} height={50} src="/img/astronauta.png" className="img-fluid animated" alt="astronauta" />
                     </div>
                 </div>
             </div>

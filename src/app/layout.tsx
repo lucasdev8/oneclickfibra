@@ -13,11 +13,29 @@ import SectionFaq from "./components/SectionFaq"
 import SectionAbout from "./components/SectionAbout"
 import SectionInfo from "./components/SectionInfo"
 import SectionTec from "./components/SectionTec"
+import { Poppins } from "next/font/google"
 
 export const metadata = {
   title: "OneClick Fibra | internet de verdade!",
   description: "Vem pra para a melhor!",
+  metadataBase: new URL("https://oneclickfibra.com.br"),
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: 'OneClick Fibra',
+    description: 'Internet fibra óptica',
+    url: 'https://oneclickfibra.com.br',
+    siteName: 'OneClick Fibra',
+    locale: 'pt_BR',
+    type: 'website'
+  }
 }
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+})
 
 export default function RootLayout({ children }: any) {
   return (
@@ -25,23 +43,23 @@ export default function RootLayout({ children }: any) {
       <InitAOS />
       <head>
 
-        {/* Google Fonts */}
+        {/* Google Fonts
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Montserrat:300,400,600,700|Poppins:300,400,600,700"
           rel="stylesheet"
-        />
+        /> */}
 
         {/* Favicons */}
         <link rel="icon" href="/img/favicon.png" />
-        
+
       </head>
 
-      <body>
+      <body className={poppins.className}>
 
         {/* Header */}
         <Header />
         <SectionHero />
-        
+
         {children}
 
         <SectionAbout />
@@ -51,11 +69,44 @@ export default function RootLayout({ children }: any) {
         <SectionFaq />
 
         <Footer />
-      
+
         <Script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/vendor/swiper/swiper-bundle.min.js" strategy="afterInteractive" />
         <Script src="/js/main.js" strategy="afterInteractive" />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'InternetServiceProvider',
+
+              name: 'OneClick Fibra',
+
+              url: 'https://oneclickfibra.com.br',
+
+
+              logo: 'https://oneclickfibra.com.br/img/logo.png',
+
+              image: 'https://oneclickfibra.com.br/img/logo-cor.png',
+
+              telephone: '+5598992489457',
+
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Mata Roma',
+                addressRegion: 'MA',
+                addressCountry: 'BR',
+              },
+
+              areaServed: 'MA',
+
+              sameAs: [
+                'https://instagram.com/oneclickfibra',
+              ],
+            }),
+          }}
+        />
 
       </body>
     </html>

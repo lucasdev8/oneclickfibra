@@ -64,7 +64,7 @@ function Plans({ plans }: Plans) {
                                     </Stack>
                                 </ul>
                                 <div className="btn-wrap">
-                                    <a href="https://t.me/kioopol_oficial" className="btn-buy">ASSINAR</a>
+                                    <a href="https://wa.me/5598992489457" className="btn-buy">ASSINAR</a>
                                 </div>
                             </div>
                         </div>

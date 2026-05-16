@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Box, Dialog, DialogContent, MenuItem, Select } from "@mui/material";
+import Image from "next/image";
 
 type Props = {
     open: boolean
@@ -21,7 +22,7 @@ function ModalCobertura({ handleClose, open, height }: Props) {
                         </Box>
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <img src="/img/logo-cor.png" alt="" width={200} />
+                        <Image src="/img/logo-cor.png" alt="OneClick" width="200" height="200"  />
                     </Box>
                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <Select defaultValue="default" fullWidth>

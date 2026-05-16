@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react"
 import { Button } from "@mui/material"
 import { useState } from "react"
 import ModalCobertura from "../utils/components/ModalCobertura"
+import Image from "next/image"
 
 function Header() {
   const [openModal, setOpenModal] = useState(false)
@@ -20,7 +21,7 @@ function Header() {
     >
       <div className="container d-flex align-items-center justify-content-between">
 
-        <img src="/img/logo.png" alt="logo" width="120" />
+        <Image src="/img/logo.png" alt="logo" width="120" height="120" />
         <ModalCobertura handleClose={handleClose} open={openModal} />
         <nav
           id="navbar"
