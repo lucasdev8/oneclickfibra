@@ -14,6 +14,8 @@ import SectionAbout from "./components/SectionAbout"
 import SectionInfo from "./components/SectionInfo"
 import SectionTec from "./components/SectionTec"
 import { Poppins } from "next/font/google"
+import { Box, Button } from "@mui/material"
+import { Icon } from "@iconify/react"
 
 export const metadata = {
   metadataBase: new URL("https://oneclickfibra.com.br"),
@@ -78,7 +80,8 @@ const schema = {
   areaServed: "Mata Roma",
 
   sameAs: [
-    "https://instagram.com/oneclickfibra"
+    "https://instagram.com/oneclickfibra",
+    "https://oneclickfibra.speedtestcustom.com"
   ],
 }
 
@@ -110,8 +113,19 @@ export default function RootLayout({ children }: any) {
         <Header />
         <SectionHero />
 
-        {children}
+        <Box sx={{ mt: 5, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Button 
+            startIcon={<Icon icon="solar:spedometer-max-bold-duotone"/>}
+            color="primary" href="https://oneclickfibra.speedtestcustom.com" 
+            variant="contained"
+            target="_blank"
+          >
+            Teste de velocidade
+            </Button>
+        </Box>
 
+        {children}
+        
         <SectionAbout />
         <SectionInfo />
         <SectionTec />
