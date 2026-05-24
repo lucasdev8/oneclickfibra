@@ -16,5 +16,9 @@ export default function sitemap() {
       url: "https://oneclickfibra.com.br/suporte",
       lastModified: new Date(),
     },
+    {
+      url: "https://oneclickfibra.com.br/minha-oneclick",
+      lastModified: new Date(),
+    },
   ]
 }

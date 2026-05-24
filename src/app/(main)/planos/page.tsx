@@ -1,4 +1,4 @@
-import Plans from "../components/Plans";
+import Plans from "@/app/components/Plans"
 
 const plans = [
   { namePlan: "START", speedPlan: "400", pricePlan: 79, typeWifi: "5G" },

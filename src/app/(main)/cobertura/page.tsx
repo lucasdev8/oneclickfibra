@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react";
-import ModalCobertura from "../utils/components/ModalCobertura";
+
 import { Box, Button } from "@mui/material";
+import ModalCobertura from "@/app/utils/components/ModalCobertura";
 
 export default function Cobertura() {
     const [openModal, setOpenModal] = useState(false)

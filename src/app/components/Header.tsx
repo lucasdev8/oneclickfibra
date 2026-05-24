@@ -3,18 +3,15 @@
 import { Icon } from "@iconify/react"
 import { Button } from "@mui/material"
 import { useState } from "react"
-import ModalCobertura from "../utils/components/ModalCobertura"
 import Image from "next/image"
 import SectionHero from "./SectionHero"
 
 function Header() {
-  const [openModal, setOpenModal] = useState(false)
 
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
-  const handleClose = () => setOpenModal(false)
-
+  
   return (
     <>
       <header
@@ -55,7 +52,6 @@ function Header() {
               <li>
                 <Button
                   href="/cobertura"
-                  onClick={() => setOpenModal(true)}
                 >
                   <Icon icon="solar:gps-bold-duotone" width={20} />
                   &nbsp;<b style={{ color: "white" }}>Cobertura</b>
@@ -74,10 +70,10 @@ function Header() {
 
               <li>
                 <Button
-                  href="https://wa.me/5598992489457"
+                  href="/minha-oneclick"
                   variant="contained"
                   color="info"
-                  onClick={closeMenu}
+
                 >
                   <Icon icon="solar:user-circle-bold-duotone" width={20} />
                   &nbsp;<b style={{ color: "white" }}>Minha OneClick</b>

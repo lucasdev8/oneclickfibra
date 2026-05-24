@@ -1,12 +1,9 @@
 import Script from "next/script"
 import "../../public/vendor/bootstrap/css/bootstrap.min.css"
 import "../../public/vendor/aos/aos.css"
-// import "../../public/vendor/boxicons/css/boxicons.min.css"
 import "../../public/vendor/swiper/swiper-bundle.min.css"
 import "./bootstrap.css"
 import InitAOS from "./components/InitAOS"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
 import { Poppins } from "next/font/google"
 
 export const metadata = {
@@ -115,12 +112,7 @@ export default function RootLayout({ children }: any) {
 
         {/* Header */}
         <InitAOS />
-        <Header />
-
         {children}
-
-        <Footer />
-
         <Script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/vendor/swiper/swiper-bundle.min.js" strategy="afterInteractive" />
