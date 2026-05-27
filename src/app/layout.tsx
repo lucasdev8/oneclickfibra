@@ -4,7 +4,7 @@ import "../../public/vendor/aos/aos.css"
 import "../../public/vendor/swiper/swiper-bundle.min.css"
 import "./bootstrap.css"
 import InitAOS from "./components/InitAOS"
-import { Poppins } from "next/font/google"
+import { Revalia } from "next/font/google"
 
 export const metadata = {
   metadataBase: new URL("https://oneclickfibra.com.br"),
@@ -89,9 +89,9 @@ const schema = {
   ],
 }
 
-const poppins = Poppins({
+const revalia = Revalia({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700'],
+  weight: ['400'],
 })
 
 export default function RootLayout({ children }: any) {
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: any) {
 
       </head>
 
-      <body className={poppins.className}>
+      <body className={revalia.className}>
 
         {/* Header */}
         <InitAOS />

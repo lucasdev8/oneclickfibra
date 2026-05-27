@@ -1,7 +1,7 @@
 "use client"
 
 import { Icon } from "@iconify/react"
-import { Stack } from "@mui/material"
+import { Box, Stack } from "@mui/material"
 import Image from "next/image"
 
 function SectionHero() {
@@ -17,17 +17,16 @@ function SectionHero() {
                                 OneClick Fibra é<br />
                                 Internet de verdade!
                             </h2> */}
-                            <h1>Internet Fibra Óptica em Mata Roma-MA</h1>
-                            <h2 style={{ color: "yellow" }}>Planos a partir de <b>R$79,99</b> com instalação rápida, suporte local, planos de até <b>800</b> Mega</h2>
-                            <div className="text-center text-lg-start" >
-                                <Stack spacing={0.5} direction="row">
+                            <h1 id="arial">Internet Fibra Óptica em Mata Roma-MA</h1>
+                            <h2 id="arial" style={{ color: "yellow" }}>Planos a partir de <b>R$79,99</b> com instalação rápida, suporte local, planos de até <b>800</b> Mega</h2>
+                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                <Stack spacing={1} direction="row">
                                     <a className="btn-get-started scrollto" href="#pricing" id="generete-ssh">
                                         <Icon icon="solar:planet-bold-duotone" width={20} />Assine já!
                                     </a>
                                     <a className="btn-boleto"><Icon icon="solar:document-text-bold-duotone" width={20} /> 2ª Via boleto</a>
                                 </Stack>
-
-                            </div>
+                            </Box>
                         </div>
                     </div>
                     <div className="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
